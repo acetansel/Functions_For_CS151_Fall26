@@ -17,3 +17,10 @@ def isString(entry, validOptions, errorMessage):
 	while not entry in validOptions:
 		entry = input(errorMessage).strip().lower()
 	return entry
+
+import os
+
+def isFile(filename, errorMessage):
+	while not os.path.isfile(filename):
+		filename = input(errorMessage).strip()
+	return filename
