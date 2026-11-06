@@ -8,9 +8,9 @@ def isPositiveFloat(value):
         return True
     return False
 
-def isinteger(value):
+def isinteger(value, errorMessage):
 	while not value.isdigit():
-		value = input(error)
+		value = input(errorMessage)
 	return int(value)
 
 def isString(entry, validOptions, errorMessage):
