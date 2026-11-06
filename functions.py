@@ -13,3 +13,7 @@ def isinteger(value):
 		value = input(error)
 	return int(value)
 
+def isString(entry, validOptions, errorMessage):
+	while not entry in validOptions:
+		entry = input(errorMessage).strip().lower()
+	return entry
