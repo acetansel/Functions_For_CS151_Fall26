@@ -25,4 +25,3 @@ def giveFile(errorMessage):
 			return filename
 		except FileNotFoundError:
 			filename = input(errorMessage)
-	
