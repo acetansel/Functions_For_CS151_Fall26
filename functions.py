@@ -25,3 +25,15 @@ def giveFile(errorMessage):
 			return filename
 		except FileNotFoundError:
 			filename = input(errorMessage)
+
+def filetoOneVarList(fileInQuestion):
+	list = []
+	for line in fileInQuestion:
+		list.append(line)
+	return list
+
+def filetoTwoVarList(fileInQuestion, splittingItem):
+	list = []
+	for line in fileInQuestion
+		list.extend(line.split(splittingItem))
+	return list
