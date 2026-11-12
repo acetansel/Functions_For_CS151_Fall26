@@ -18,9 +18,11 @@ def isString(entry, validOptions, errorMessage):
 		entry = input(errorMessage).strip().lower()
 	return entry
 
-import os
-
-def isFile(filename, errorMessage):
-	while not os.path.isfile(filename):
-		filename = input(errorMessage).strip()
-	return filename
+def giveFile(errorMessage):
+	while True:
+		try:
+			filename = input()
+			return filename
+		except FileNotFoundError:
+			filename = input(errorMessage)
+	
