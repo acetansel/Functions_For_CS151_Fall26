@@ -35,5 +35,5 @@ def filetoOneVarList(fileInQuestion):
 def filetoTwoVarList(fileInQuestion, splittingItem):
 	list = []
 	for line in fileInQuestion:
-		list.extend(line.split(splittingItem))
+		list.append(line.split(splittingItem))
 	return list
