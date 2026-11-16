@@ -24,7 +24,7 @@ def giveFile(errorMessage):
 			filename = open(input())
 			return filename
 		except FileNotFoundError:
-			filename = input(errorMessage)
+			filename = open(input(errorMessage))
 
 def filetoOneVarList(fileInQuestion):
 	list = []
