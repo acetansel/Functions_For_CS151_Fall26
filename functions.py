@@ -21,7 +21,7 @@ def isString(entry, validOptions, errorMessage):
 def giveFile(errorMessage):
 	while True:
 		try:
-			filename = input()
+			filename = open(input())
 			return filename
 		except FileNotFoundError:
 			filename = input(errorMessage)
