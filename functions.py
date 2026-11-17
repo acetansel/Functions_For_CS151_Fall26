@@ -1,3 +1,9 @@
+def toContinue():
+	input("Return to continue...")
+
+def toLoop():
+	input("Return to repeat...")
+
 def isFloat(value):
 	if value.replace(".","",1).replace("-","",1).isdigit():
 		return True
@@ -24,16 +30,16 @@ def giveFile(errorMessage):
 			filename = open(input())
 			return filename
 		except FileNotFoundError:
-			filename = open(input(errorMessage))
+			filename = open(input(errorMessage, end=""))
 
 def filetoOneVarList(fileInQuestion):
 	list = []
 	for line in fileInQuestion:
-		list.append(line)
+		list.append(line.strip("\n"))
 	return list
 
 def filetoTwoVarList(fileInQuestion, splittingItem):
 	list = []
 	for line in fileInQuestion:
-		list.append(line.split(splittingItem))
+		list.append(line.split(splittingItem).strip("\n"))
 	return list
