@@ -1,7 +1,10 @@
 def toContinue():
 	input("Return to continue...")
+def lineout():
+	print("-" * 50)
+	return "-" * 50
 def toLoop():
-	input("Return to restart...")
+	input("This program will now restart on the next key")
 def isFloat(value):
 	if value.replace(".","",1).replace("-","",1).isdigit():
 		return True
@@ -16,7 +19,7 @@ def inputString(options, error):
 	while not entry in options:
 		entry = input(error).strip().lower()
 	return entry
-def giveFile(error):
+def inputFile(error):
 	while True:
 		try:
 			filename = open(input())
@@ -33,3 +36,13 @@ def filetoTwoVarList(fileInQuestion, splittingItem):
 	for line in fileInQuestion:
 		list.append(line.split(splittingItem).strip("\n"))
 	return list
+def leninput(string):
+	if len(input(string)) > 0:
+		return False
+	return True
+def randomize(deck):
+	import random
+	newdeck = []
+	for iteration in deck[:]:
+		newdeck.append(deck.pop(random.randint(0,len(deck))))
+	return newdeck
